@@ -2,12 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>storehubx-test-private</title>
+    <title>Confirm Modal — storehubx-test-private</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <button id="open-btn" type="button">Delete component</button>
+
+      <div id="overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <h2 id="modal-title">Delete this component?</h2>
+          <p>This removes it and every version's build output. This can't be undone.</p>
+          <div class="modal-actions">
+            <button id="cancel-btn" type="button" class="btn-secondary">Cancel</button>
+            <button id="confirm-btn" type="button" class="btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
